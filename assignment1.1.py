@@ -1,14 +1,19 @@
 from math import sqrt
 
+# Exercise 1
 def Exercise1(message):
 	""" Print a message """
 	print(message)
 
+
+# Exercise 2
 def Exercise2(value: float):
 	""" Calculte absolute value """
 	absValue = abs(value)
 	print(f"The absolute value of {value} is {absValue}")
 
+
+# Exercise 3
 def Exercise3(age):
 	""" Calculate bus ticket from age """
 	if age < 18:
@@ -18,15 +23,20 @@ def Exercise3(age):
 	else:
 		print("30kr")
 
+
+# Exercise 4
 def Exercise4(x1, y1, x2, y2):
 	""" Calculate distance between two points """
 	d = sqrt((x2 - x1)**2 + (y2 - y1)**2)
 	print(d)
 
+
+# Exercise 5
 def Exercise5(initVel, acc, time):
 	""" Calculate velocity at given time """
 	velocity = initVel + (acc * time)
 	print(f"{velocity} m/s")
+
 
 if __name__ == '__main__':
 	print("\n--- Exercise 1 ---")

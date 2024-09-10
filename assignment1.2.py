@@ -1,5 +1,6 @@
 import math
 
+# Exercise 1
 def Exercise1(number):
 	""" Check if nubmer is even or odd and is divisible by 7. """
 	if number % 2:
@@ -14,6 +15,8 @@ def Exercise1(number):
 
 	print(f"{number} is {parity} and {is_isnot} divisible by 7.")
 
+
+# Exercise 2
 def Exercise2(a, b):
 	""" Calculate the absolute difference between a and b. """
 	if a > b:
@@ -25,6 +28,8 @@ def Exercise2(a, b):
 
 	print(f"The absolute difference between {a} and {b} is {difference}.")
 
+
+# Exercise 3
 def Swap(a, b):
 	""" Swap two numbers. """
 	return b, a
@@ -42,27 +47,32 @@ def Exercise3(a, b, c):
 	
 	print(f"{a}, {b}, {c}")
 
+
+# Exercise 4
 def Exercise4():
 	for num in range(51):
 		Exercise1(num)
 
+
+# Exercise 5
 def Cotangent(k):
 	""" Calculates the cotagent of k. """
 	return math.cos(k)/math.sin(k)
 
-def Exercise5_1(iterations=40):
+def Exercise5a(iterations=40):
 	""" Calculates the sum cotangent from 1 to set interations, using a for loop."""
 	result = sum(Cotangent(k) for k in range(1, iterations+1))
-	print(round(result, 2))
+	print(f"Using for loop: \t{round(result, 2)}")
 
-def Exercise5_2(iterations=40):
+def Exercise5b(iterations=40):
 	""" Calculates the sum cotangent from 1 to set interations, using a while loop. """
 	result = 0
 
 	while iterations:
 		result += Cotangent(iterations)
 		iterations -= 1
-	print(round(result, 2))
+	print(f"Using while loop: \t{round(result, 2)}")
+
 
 if __name__ == "__main__":
 	print("\n--- Exercise 1 ---")
@@ -86,5 +96,5 @@ if __name__ == "__main__":
 	Exercise4()
 	
 	print("\n--- Exercise 5 ---")
-	Exercise5_1()
-	Exercise5_2()
+	Exercise5a()
+	Exercise5b()
