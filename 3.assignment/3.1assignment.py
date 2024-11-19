@@ -174,7 +174,7 @@ def find_cheapest_shop(shops: dict, shopping_list: list) -> str:
     return cheapestShop
 
 if __name__ == "__main__":
-    # Exercise 1
+    # Testing exercise 1
     print("--- Exercise 1 ---")
     text = "This is a test message \nTest Testing Tested"
     print(f"Input text: \n{text}\n")
@@ -193,7 +193,7 @@ if __name__ == "__main__":
     result = str_occur(text, symbol)
     print(f"Indecies of symbol \"{symbol}\": \n{result}\n")
 
-    # Exercise 2
+    # Testing exercise 2
     print("--- Exercise 2 ---")
     flag_colours = {
     "norway" : ["red", "white", "blue"],
@@ -224,7 +224,7 @@ if __name__ == "__main__":
 
     # Task 2B and 2C
     # Tesiting a non existing country
-    # 2B explination is done in the function where it is catched
+    # Explination of 2B is done in the function where it is catched
     country = "absurdistan"
     try:
         colours = get_colours(flag_colours, country)
@@ -234,6 +234,7 @@ if __name__ == "__main__":
         print(f"A KeyError was raised:\n{e}\n")
 
     # Task 2D
+    # Testing a colour that many flags has
     flagColour = "blue"
     try:
         countries = get_countries(flag_colours, flagColour)
@@ -241,6 +242,7 @@ if __name__ == "__main__":
     except ValueError as e:
         print(f"A ValueError was raised:\n{e}\n")
 
+    # Testing a colour that no flag has
     flagColour = "orange"
     try:
         countries = get_countries(flag_colours, flagColour)
@@ -248,7 +250,7 @@ if __name__ == "__main__":
     except ValueError as e:
         print(f"A ValueError was raised:\n{e}\n")
 
-    # Exercise 3
+    # Testing exercise 3
     print("--- Exercise 3 ---")
     shops = {"extra": {"fish": 90, "bread": 32, "apples": 29, "potatoes": 14},
              "rema": {"fish": 79, "bread": 37, "apples": 39, "milk": 29},
@@ -277,4 +279,3 @@ if __name__ == "__main__":
         print(f"The cheapest shop for buying {shoppingList}:\n{cheapestShop}\n")
     except ValueError as e:
         print(f"A ValueError was raised:\n{e}")
-
